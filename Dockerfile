@@ -11,5 +11,5 @@ COPY . .
 
 CMD [ "python3", "-m" , "flask", "run", "--host=0.0.0.0"]
 
-# docker build -t n52/python-docker-build .
-# docker run -it -p 5000:5000 n52/python-docker-demo
+# docker build -t n52/python-docker-demo .
+# docker run -it -env CUSTOM_DEMO_GREETING="Custom greeting text!" -p 5000:5000 n52/python-docker-demo

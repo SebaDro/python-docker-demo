@@ -1,0 +1,8 @@
+version: "3.9"
+services:
+  app-demo:
+    image: n52/python-docker-demo
+    ports:
+      - "8000:5000"
+    environment:
+      - CUSTOM_GREETING=Hello
