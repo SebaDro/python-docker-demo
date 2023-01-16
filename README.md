@@ -28,3 +28,10 @@ The Flask web server listens on port `5000` inside the container. The `-p` argum
 ### Call the Web Service
 Congratulations! You just set up your first Python web application with Docker. Now you can call the web service via:
 [http://localhost:5000/greeting?name=Demo](http://localhost:5000/greeting?name=Demo)
+### Use Docker Compose
+As you already now, how to build and image and run a container from it, it's time to automate container configurations via Docker Compose. For this purpose, you'll find a [docker-compose.yml](./docker-compose.yml) within the repository.
+
+The docker-compose file simply defines a single service, which will be started from the python-docker-demo image. It also defines a port mapping so that the service will be available under port 8000 on you host. You may also notice an `environment` section. This sections contains the definition of the `CUSTOM_GREETING` environment variable to set a custom greeting phrase. You may want to set your own phrase here.
+
+To run the container with docker compose, first stop the running container, if not already done, with `ctrl+c`. Then call `docker compose up` from the root of the project directory. As a result, the service now is accesible via:
+[http://localhost:8000/greeting?name=Demo](http://localhost:8000/greeting?name=Demo).
