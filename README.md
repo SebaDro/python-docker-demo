@@ -21,7 +21,7 @@ The `.`, at the end of the command, defines the directory, in which to execute t
 ### Run a Docker Container
 To create a new container from the previously created image, use the `docker run` command:
 ```
-docker run -it -p 5000:5000 n52/python-docker-demo
+docker run -it -p 5000:5000 n52/python-docker-demo:dev
 ```
 The Flask web server listens on port `5000` inside the container. The `-p` argument defines a port mapping, which exposes port `5000` on your host machine. To choose another port for your host machine just adopt the argument value, such as `-p 8080:5000`.
 ### Call the Web Service
