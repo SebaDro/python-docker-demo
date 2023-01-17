@@ -1,7 +1,7 @@
 # Python Docker Demo
 This project simply demonstrates how to create and run a Docker container that provides a Flask-based web service.
 ## Get Started
-### Create a Dockerfile
+### Inspect the Dockerfile
 The Dockerfile is a template that defines how to create a Docker image when calling `docker build`. The Dockerfile for this project is as simple as possible and contains the instructions listed below:
 * `FROM python:3.8-slim-buster`: Python parent image, which contains all needed system libraries to run Python applications.
 * `WORKDIR /app`: Creates and sets _/app_ the working directory inside the image.
